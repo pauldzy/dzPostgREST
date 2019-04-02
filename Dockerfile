@@ -1,8 +1,8 @@
-FROM haskell:8.0.2 AS builder
+FROM haskell:8.6.3 AS builder
 
 LABEL maintainer="Paul Dziemiela <Paul@Dziemiela.com>"
 
-ENV POSTGREST_VERSION 5.1.0
+ENV POSTGREST_VERSION 5.2.0
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -37,6 +37,7 @@ RUN cd /tmp/postgrest-${POSTGREST_VERSION}/src/PostgREST  &&\
     
 RUN cd /tmp/postgrest-${POSTGREST_VERSION}             &&\
     stack build                                          \
+       --install-ghc                                     \
        --copy-bins                                       \
        --local-bin-path /usr/local/bin                   \
        --verbosity info                                &&\
