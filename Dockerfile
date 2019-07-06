@@ -1,4 +1,4 @@
-FROM haskell:8.6.5 AS builder
+FROM haskell:8.4.4 AS builder
 
 LABEL maintainer="Paul Dziemiela <Paul@Dziemiela.com>"
 
