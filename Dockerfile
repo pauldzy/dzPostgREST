@@ -40,7 +40,8 @@ RUN cd /tmp/postgrest-${POSTGREST_VERSION}             &&\
        --install-ghc                                     \
        --copy-bins                                       \
        --local-bin-path /usr/local/bin                   \
-       --verbosity info                                &&\
+       --verbosity info                                  \
+       --jobs 1                                        &&\
     rm -Rf /tmp/postgrest-${POSTGREST_VERSION}
               
 FROM debian:stretch
