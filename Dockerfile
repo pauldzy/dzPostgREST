@@ -1,8 +1,8 @@
-FROM haskell:8.6.3 AS builder
+FROM haskell:8.6.5 AS builder
 
 LABEL maintainer="Paul Dziemiela <Paul@Dziemiela.com>"
 
-ENV POSTGREST_VERSION 5.2.0
+ENV POSTGREST_VERSION 6.0.0
 
 ARG DEBIAN_FRONTEND=noninteractive
 
