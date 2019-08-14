@@ -2,7 +2,7 @@ FROM haskell:8.4.4 AS builder
 
 LABEL maintainer="Paul Dziemiela <Paul@Dziemiela.com>"
 
-ENV POSTGREST_VERSION 6.0.0
+ENV POSTGREST_VERSION 6.0.1
 
 ARG DEBIAN_FRONTEND=noninteractive
 
